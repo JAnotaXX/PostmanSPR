@@ -72,10 +72,12 @@
                 </div>
             </div>
         </nav>
-        <main class>
+        <main class="mt-5">
             @yield('content')
         </main>
     </div>
+</body>
+
 <footer class="container-fluid footer">
         <div class="row pre-footer">
             <div class="col-sm">
