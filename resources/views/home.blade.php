@@ -5,7 +5,9 @@
   <div class="container">
     <h1 class="display-4">Sistema Publico de Radiodifusión del Estado Méxicano | PostMan |</h1>
     <p class="lead">Servicio de rececpción y envío.</p>
-    <button type="button" class="btn btn-primary">Envio de Correspondencia</button>
+    <button type="button" class="btn btn-primary">
+        <a href="{{ route('envioC') }}"><span class="text-dark">{{ __('Envio de correspondencia') }}</span></a>    
+    </button>
   </div>
 </div>
 @endsection
