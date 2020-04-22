@@ -13,57 +13,58 @@
             <div class="card border-primary mb-3">
                 <div class="card-header text-white text-center" style="background-color: #27354d">Envío de correspondencia</div>
                 <div class="card-body">
-                    <form>
+                    <form action="/sendC" method="POST">
+                        @csrf
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="folioR">Folio</label>
-                                <input type="text" class="form-control" id="folioR">
+                                <input type="text" class="form-control" id="folioR" name="folioR">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="fechaRR">Fecha de Recepción</label>
-                                <input type="text" class="form-control" id="fechaRR">
+                                <input type="text" class="form-control" id="fechaRR" name="fechaRR">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="horaRR">Hora de recepción</label>
-                                <input type="text" class="form-control" id="horaRR">
+                                <input type="text" class="form-control" id="horaRR" name="horaRR">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="unidadSR">Unidad Administrativa Solicitante</label>
-                                <input type="text" class="form-control" id="unidadSR">
+                                <input type="text" class="form-control" id="unidadSR" name="unidadSR">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="numeroOR">Numero de Oficio</label>
-                                <input type="text" class="form-control" id="numeroOR">
+                                <input type="text" class="form-control" id="numeroOR" name="numeroOR">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="fechaOR">Fecha máxima en la que se recibirá el oficio</label>
-                                <input type="text" class="form-control" id="fechaOR">
+                                <input type="text" class="form-control" id="fechaOR" name="fechaOR">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="horaOR">Hora máxima en la que se recibirá el oficio</label>
-                                <input type="text" class="form-control" id="horaOR">
+                                <input type="text" class="form-control" id="horaOR" name="horaOR">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contenidoPR">Contenido del paquete</label>
-                            <textarea class="form-control" id="contenidoPR" rows="4"></textarea>
+                            <textarea class="form-control" id="contenidoPR" rows="4" name="contenidoPR"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="justificacionPR">Justificación del envío con caracter de urgente</label>
-                            <textarea class="form-control" id="justificacionPR" rows="4"></textarea>
+                            <textarea class="form-control" id="justificacionPR" rows="4" name="justificacionPR"></textarea>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="urgentePR">
+                            <input class="form-check-input" type="checkbox" value="" id="urgentePR" name="urgentePR">
                             <label class="form-check-label" for="defaultCheck1">
                               Envío con caracter urgente
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="terminosPR">
+                            <input class="form-check-input" type="checkbox" value="" id="terminosPR" name="terminosPR">
                             <label class="form-check-label" for="defaultCheck1">
                               Esta de acuerdo con los terminos y condiciones
                             </label>

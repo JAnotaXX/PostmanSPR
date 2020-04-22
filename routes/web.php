@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/envioC','HomeController@envioC')->name('envioC');
-Route::post('/sendC', 'CorrespondenciaEnvController@store');
+Route::post('/sendC', 'CorrespondenciaEnvController@guardar');
