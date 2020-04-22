@@ -8,6 +8,9 @@
     <button type="button" class="btn btn-primary">
         <a href="{{ route('envioC') }}"><span class="text-dark">{{ __('Envio de correspondencia') }}</span></a>    
     </button>
+    <button type="button" class="btn btn-primary ml-3">
+      <a href="{{ route('listaC') }}"><span class="text-dark">{{ __('Lista de correspondencias') }}</span></a>    
+  </button>
   </div>
 </div>
 @endsection

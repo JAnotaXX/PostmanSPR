@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('postman.envioC');
     }
+
+    public function listaC()
+    {
+        return view('postman.listaC');
+    }
 }
