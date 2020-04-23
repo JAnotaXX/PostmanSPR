@@ -11,6 +11,12 @@ class CorrespondenciaEnvController extends Controller
 {
     function guardar(Request $request){
 
+        $this->validate($request, [
+            'nombre' => 'required|max:255',
+            'descripcion' => 'required',
+            'precio' => 'required|numeric',
+        ]);
+
         $postman = new Postman;
         $postman->folioR = $request->input("folioR");
         $postman->fechaRR = $request->input("fechaRR");

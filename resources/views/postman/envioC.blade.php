@@ -20,14 +20,6 @@
                                 <label for="folioR">Folio</label>
                                 <input type="text" class="form-control" id="folioR" name="folioR">
                             </div>
-                            <div class="form-group col-md-4">
-                                <label for="fechaRR">Fecha de Recepción</label>
-                                <input type="text" class="form-control" id="fechaRR" name="fechaRR">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="horaRR">Hora de recepción</label>
-                                <input type="text" class="form-control" id="horaRR" name="horaRR">
-                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
@@ -38,15 +30,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="numeroOR">Numero de Oficio</label>
-                                <input type="text" class="form-control" id="numeroOR" name="numeroOR">
+                                <input type="number" class="form-control" id="numeroOR" name="numeroOR">
                             </div>
-                            <div class="form-group col-md-4">
-                                <label for="fechaOR">Fecha máxima en la que se recibirá el oficio</label>
-                                <input type="text" class="form-control" id="fechaOR" name="fechaOR">
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="horaOR">Hora máxima en la que se recibirá el oficio</label>
-                                <input type="text" class="form-control" id="horaOR" name="horaOR">
+                            <div class="form-group col-md-8">
+                                <label for="fechaOR">Fecha y hora máxima en la que se recibirá el documento en la institución respectiva</label>
+                                <input type="text" class="form-control " id="fechaOR" name="fechaOR">
                             </div>
                         </div>
                         <div class="form-group">
