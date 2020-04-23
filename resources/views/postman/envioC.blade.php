@@ -18,35 +18,39 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="folioR">Folio</label>
-                                <input type="text" class="form-control" id="folioR" name="folioR">
+                                <input type="text" class="form-control" id="folioR" name="folioR" maxlength="15" onkeyup="this.value=NumText(this.value)">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="unidadSR">Unidad Administrativa Solicitante</label>
-                                <input type="text" class="form-control" id="unidadSR" name="unidadSR">
+                                <input type="text" class="form-control" id="unidadSR" name="unidadSR" maxlength="30" onkeyup="this.value=NumText(this.value)">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="numeroOR">Numero de Oficio</label>
-                                <input type="number" class="form-control" id="numeroOR" name="numeroOR">
+                                <input type="text" class="form-control" id="numeroOR" name="numeroOR" maxlength="15" onkeyup="this.value=Numeros(this.value)">
                             </div>
-                            <div class="form-group col-md-8">
-                                <label for="fechaOR">Fecha y hora máxima en la que se recibirá el documento en la institución respectiva</label>
-                                <input type="text" class="form-control " id="fechaOR" name="fechaOR">
+                            <div class="form-group col-md-4">
+                                <label for="fechaOR">Fecha máxima de recepción</label>
+                                <input type="date" class="form-control" id="fechaOR" name="fechaOR" min="2018-02-05" max="2018-06-10" step="2">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="fechaOR">Hora máxima de recepción</label>
+                                <input type="time" class="form-control" id="horaOR" name="horaOR" min="18:00" max="21:00"step="3600">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="contenidoPR">Contenido del paquete</label>
-                            <textarea class="form-control" id="contenidoPR" rows="4" name="contenidoPR"></textarea>
+                            <textarea class="form-control" id="contenidoPR" rows="4" name="contenidoPR" maxlength="300" onkeyup="this.value=NumText(this.value)"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="justificacionPR">Justificación del envío con caracter de urgente</label>
-                            <textarea class="form-control" id="justificacionPR" rows="4" name="justificacionPR"></textarea>
+                            <textarea class="form-control" id="justificacionPR" rows="4" name="justificacionPR" maxlength="300" onkeyup="this.value=NumText(this.value)" disabled></textarea>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="urgentePR" name="urgentePR">
+                            <input class="form-check-input" type="checkbox" value="" id="urgentePR" name="urgentePR" onclick="myFunction()">
                             <label class="form-check-label" for="defaultCheck1">
                               Envío con caracter urgente
                             </label>

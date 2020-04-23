@@ -16,12 +16,10 @@ class CorrespondenciaETable extends Migration
         Schema::create('correspondenciaE', function (Blueprint $table) {
             $table->increments('id');
             $table->string('folioR');
-            $table->string('fechaRR');
-            $table->string('horaRR');
             $table->string('unidadSR');
             $table->string('numeroOR');
-            $table->string('fechaOR');
-            $table->string('horaOR');
+            $table->date('fechaOR');
+            $table->time('horaOR');
             $table->string('contenidoPR');
             $table->string('justificacionPR');
             $table->boolean('urgentePR');
