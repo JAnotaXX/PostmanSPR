@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Postman;
 use Yajra\Datatables\Datatables;
 use Redirect,Response,DB,Config;
+use Carbon\Carbon;
+
 
 class CorrespondenciaEnvController extends Controller
 {
@@ -24,6 +26,10 @@ class CorrespondenciaEnvController extends Controller
         $postman->terminosPR = $request->has("terminosPR");
         $postman->save();
         $postman = Postman::all();
+        $folioR = $request->input("folioR");
+        $unidadSR = $request->input("unidadSR");
+        $pdf = \PDF::loadView('pdf.urgentePDF', compact('folioR','unidadSR'));
+        return $pdf->download('archivo.pdf');
         return view('postman.envioC');
     }
 
@@ -32,14 +38,5 @@ class CorrespondenciaEnvController extends Controller
         $postman = DB::table('correspondenciae')->select('*');
         return datatables()->of($postman)
             ->make(true);
-    }
-
-    public function download()
-    {
-        $data = [
-            'titulo' => 'Styde.net'
-        ];
-        $pdf = \PDF::loadView('pdf.urgentePDF', $data);
-        return $pdf->download('archivo.pdf');
     }
 }

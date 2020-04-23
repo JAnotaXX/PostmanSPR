@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <p>Datos para ser requisitados por la OFICINA DE CORRESPONDENCIA</p>
-        <p>Folio</p>
+        <p>Folio</p> <p>{{$folioR}}</p><p>{{$unidadSR}}</p>
         <p>Fecha de recepción</p>
         <p>Hora de recepción</p>
     </div>
