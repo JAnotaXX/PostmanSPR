@@ -10,7 +10,10 @@
     </button>
     <button type="button" class="btn btn-primary ml-3">
       <a href="{{ route('listaC') }}"><span class="text-dark">{{ __('Lista de correspondencias') }}</span></a>    
-  </button>
+    </button>
+    <button type="button" class="btn btn-primary ml-3">
+      <a href="{{ route('generarPDF') }}"><span class="text-dark">{{ __('Generar PDF') }}</span></a>    
+    </button>
   </div>
 </div>
 @endsection

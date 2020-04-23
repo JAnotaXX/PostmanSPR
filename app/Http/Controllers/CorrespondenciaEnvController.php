@@ -33,4 +33,13 @@ class CorrespondenciaEnvController extends Controller
         return datatables()->of($postman)
             ->make(true);
     }
+
+    public function download()
+    {
+        $data = [
+            'titulo' => 'Styde.net'
+        ];
+        $pdf = \PDF::loadView('pdf.urgentePDF', $data);
+        return $pdf->download('archivo.pdf');
+    }
 }

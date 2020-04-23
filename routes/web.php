@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/envioC','HomeController@envioC')->name('envioC');
 Route::get('/listaC','HomeController@listaC')->name('listaC');
+Route::get('/generarPDF','CorrespondenciaEnvController@download')->name('generarPDF');
 Route::post('/sendC', 'CorrespondenciaEnvController@guardar');
 Route::get('/guardarData', 'CorrespondenciaEnvController@guardarData');
