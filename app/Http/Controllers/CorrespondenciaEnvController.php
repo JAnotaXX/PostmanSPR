@@ -40,7 +40,7 @@ class CorrespondenciaEnvController extends Controller
         $pdf = \PDF::loadView('pdf.urgentePDF', 
         compact('folioR','unidadSR','numeroOR','fechaOR','horaOR','contenidoPR','justificacionPR','urgentePR','today'))->output();
         Storage::disk('public')->put($folioR.".pdf", $pdf);
-        return view('postman.envioC');
+        return Redirect::to("/envioC")->withSuccess('Se han guardado los datos de forma correcta.');
     }
 
     public function guardarData()

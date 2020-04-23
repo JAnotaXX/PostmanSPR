@@ -19,19 +19,9 @@
             background-color: #27354d;;
             color: white;
             line-height: 30px;
+            text-align: center;
         }
- 
-        footer {
-            position: fixed;
-            bottom: 0cm;
-            left: 0cm;
-            right: 0cm;
-            height: 2cm;
-            background-color: #27354d;
-            color: white;
-            line-height: 35px;
-        }
-        
+
         .primer {
             text-align: right;
         }
@@ -99,8 +89,5 @@
         </div>
     </div>
 </main>
-<footer>
-    <h3 style="margin-left: 10px">Sistema Publico de Radiodifusión del Estado Mexicano</h3>
-</footer>
 </body>
 </html>
