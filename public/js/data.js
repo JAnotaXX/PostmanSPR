@@ -20,8 +20,13 @@ $(document).ready( function () {
       ajax: "guardarData",
       columns: [
          { data: 'id', name: 'id' },
-         { data: 'created_at', name: 'created_at' },
-
+         { data: 'folioR', name: 'folioR' },
+         { data: 'unidadSR', name: 'unidadSR' },
+         { data: 'numeroOR', name: 'numeroOR' },
+         { data: 'fechaOR', name: 'fechaOR' },
+         { data: 'horaOR', name: 'horaOR' },
+         { data: 'contenidoPR', name: 'contenidoPR' },
+         { data: 'justificacionPR', name: 'justificacionPR' },
       ]
    });
 });

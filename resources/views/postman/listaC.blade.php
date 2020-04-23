@@ -6,12 +6,20 @@
     <p class="lead">Servicio de rececpción y envío.</p>
   </div>
 </div>
-<table class="table table-bordered" id="laravel_datatable">
-  <thead>
-     <tr>
-        <th>Id</th>
-        <th>Created at</th>
-     </tr>
-  </thead>
-</table>
+<div class="container container-fluid">
+  <table class="table table-bordered" id="laravel_datatable">
+    <thead>
+      <tr>
+          <th>Id</th>
+          <th>Folio</th>
+          <th>Unidad administrativa solicitante</th>
+          <th>Numero de oficio</th>
+          <th>Fecha maxima de recepción</th>
+          <th>Hora maxima de recepción</th>
+          <th>Contenido del paquete</th>
+          <th>Justificación Urgente</th>
+      </tr>
+    </thead>
+  </table>
+</div>
 @endsection

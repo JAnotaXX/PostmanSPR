@@ -25,7 +25,6 @@ class CorrespondenciaEnvController extends Controller
         $postman->save();
         $postman = Postman::all();
         return view('postman.envioC');
-        console.log("Guardado");
     }
 
     public function guardarData()

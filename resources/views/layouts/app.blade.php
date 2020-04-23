@@ -13,12 +13,11 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>     
-    <script src="{{asset('datePicker/js/bootstrap-datepicker.js')}}"></script>
-    <script src="{{asset('datePicker/locales/bootstrap-datepicker.es.min.js')}}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/action.js') }}" defer></script>
     <script src="{{ asset('js/data.js') }}" defer></script>
+    <script type="text/javascript" src="{{asset('js/jquery.dataTables.min.js')}}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,8 +26,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/colors.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-datepicker3.css')}}">
-     <link rel="stylesheet" href="{{asset('datePicker/css/bootstrap-standalone.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 
 </head>
 <body style="background-color:#ffffff">
