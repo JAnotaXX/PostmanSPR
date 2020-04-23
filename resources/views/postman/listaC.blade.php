@@ -6,4 +6,12 @@
     <p class="lead">Servicio de rececpción y envío.</p>
   </div>
 </div>
+<table class="table table-bordered" id="laravel_datatable">
+  <thead>
+     <tr>
+        <th>Id</th>
+        <th>Created at</th>
+     </tr>
+  </thead>
+</table>
 @endsection

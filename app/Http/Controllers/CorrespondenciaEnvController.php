@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Postman;
+use Yajra\Datatables\Datatables;
+use Redirect,Response,DB,Config;
 
 class CorrespondenciaEnvController extends Controller
 {
@@ -23,5 +25,12 @@ class CorrespondenciaEnvController extends Controller
         $postman->terminosPR = $request->has("terminosPR");
         $postman->save();
         $postman = Postman::all();
+    }
+
+    public function guardarData()
+    {
+        $postman = DB::table('correspondenciae')->select('*');
+        return datatables()->of($postman)
+            ->make(true);
     }
 }
