@@ -15,16 +15,20 @@
     </div>
     <div class="row">
         <p>Datos para ser requisitados por la OFICINA DE CORRESPONDENCIA</p>
-        <p>Folio</p> <p>{{$folioR}}</p><p>{{$unidadSR}}</p>
+        <p>Folio</p> <p>{{$folioR}}</p>
         <p>Fecha de recepción</p>
         <p>Hora de recepción</p>
     </div>
     <div class="row">
-        <p>Unidad administrativa solicitante</p>
-        <p>Numero de oficio</p>
+        <p>Unidad administrativa solicitante</p> <p>{{$unidadSR}}</p>
+        <p>Numero de oficio</p><p>{{$numeroOR}}</p>
         <p>Fecha y hora máxima en la que se recibirá el documento en la institución respectiva</p>
+        <p>{{$fechaOR}}</p>
+        <p>{{$horaOR}}</p>
         <p>Contenido del paquete en su caso.</p>
+        <p>{{$contenidoPR}}</p>
         <p>Justificación del envío con caracter urgente</p>
+        <p>{{$justificacionPR}}</p>
         <p>Entrega</p>
         <p>Recibe</p>
         <p>Sello</p>

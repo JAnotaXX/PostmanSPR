@@ -28,7 +28,13 @@ class CorrespondenciaEnvController extends Controller
         $postman = Postman::all();
         $folioR = $request->input("folioR");
         $unidadSR = $request->input("unidadSR");
-        $pdf = \PDF::loadView('pdf.urgentePDF', compact('folioR','unidadSR'));
+        $numeroOR = $request->input("numeroOR");
+        $fechaOR = $request->input("fechaOR");
+        $horaOR = $request->input("horaOR");
+        $contenidoPR = $request->input("contenidoPR");
+        $justificacionPR = $request->input("justificacionPR");
+        $urgentePR = $request->has("urgentePR");
+        $pdf = \PDF::loadView('pdf.urgentePDF', compact('folioR','unidadSR','numeroOR','fechaOR','horaOR','contenidoPR','justificacionPR','urgentePR'));
         return $pdf->download('archivo.pdf');
         return view('postman.envioC');
     }
