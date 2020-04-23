@@ -7,6 +7,8 @@ use App\Postman;
 use Yajra\Datatables\Datatables;
 use Redirect,Response,DB,Config;
 use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Storage;
 
 
 class CorrespondenciaEnvController extends Controller
@@ -34,8 +36,10 @@ class CorrespondenciaEnvController extends Controller
         $contenidoPR = $request->input("contenidoPR");
         $justificacionPR = $request->input("justificacionPR");
         $urgentePR = $request->has("urgentePR");
-        $pdf = \PDF::loadView('pdf.urgentePDF', compact('folioR','unidadSR','numeroOR','fechaOR','horaOR','contenidoPR','justificacionPR','urgentePR'));
-        return $pdf->download('archivo.pdf');
+        $today = Carbon::now()->format('Y-m-d\TH:i:s');
+        $pdf = \PDF::loadView('pdf.urgentePDF', 
+        compact('folioR','unidadSR','numeroOR','fechaOR','horaOR','contenidoPR','justificacionPR','urgentePR','today'))->output();
+        Storage::disk('public')->put($folioR.".pdf", $pdf);
         return view('postman.envioC');
     }
 

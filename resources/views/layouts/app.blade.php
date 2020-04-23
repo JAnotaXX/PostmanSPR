@@ -33,7 +33,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-sm colorspr">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     <img src="{{ asset('images/logo_spr.png') }}" width="110" height="60" alt=""> <span class="text-white">Sistema Publico de Radiodifusión del Estado Mexicano</span>
                 </a>
 
